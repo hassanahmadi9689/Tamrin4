@@ -23,20 +23,20 @@ static void Run()
                                    "3.Show Car\n" +
                                    "4.update price\n" +
                                    "5.Rent Car\n" +
-                                   "6.show user rent car");
+                                   "6.show user rent car :");
     switch (Option)
     {
         case 1:
         {
-            var name = GetValidStringFromUser("enter name of car");
+            var name = GetValidStringFromUser("enter name of car :");
             var count = GetNumberFromUser("enter count of this car:");
-            var price = GetNumberFromUser("enter price");
+            var price = GetNumberFromUser("enter price :");
             Management.AddRentalCar(name,price,count);
             break;
         }
         case 2:
         {
-            var username = GetValidStringFromUser("enter name of user");
+            var username = GetValidStringFromUser("enter name of user :");
             Management.AddUser(username);
             break;
         }
@@ -50,21 +50,21 @@ static void Run()
         }
         case 4:
         {
-            var carname = GetValidStringFromUser("enter name of car");
-            var Newprice = GetNumberFromUser("enter new price");
+            var carname = GetValidStringFromUser("enter name of car :");
+            var Newprice = GetNumberFromUser("enter new price :");
             Management.UpdatePrice(carname,Newprice);
             break;
         }
         case 5:
         {
-            var carname = GetValidStringFromUser("enter name of car");
-            var username = GetValidStringFromUser("enter name of user");
+            var carname = GetValidStringFromUser("enter name of car :");
+            var username = GetValidStringFromUser("enter name of user :");
             Management.RentCar(username,carname);
             break;
         }
         case 6:
         {
-            var username = GetValidStringFromUser("enter username");
+            var username = GetValidStringFromUser("enter username :");
             Management.showRentUser(username);
             break;
         }
